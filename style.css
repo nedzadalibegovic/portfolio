@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Trocchi");
 
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  background-color: #212121;
-  font-family: "Trocchi", serif;
+	height: 100%;
+	width: 100%;
+	background-color: #212121;
+	font-family: "Trocchi", serif;
 }
 
 /* ::-webkit-scrollbar {
@@ -18,53 +18,53 @@ body {
 } */
 
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 500px;
-  background-color: #ffffff;
-  /* https://css-tricks.com/creating-non-rectangular-headers/#article-header-id-2 */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 500px;
+	background-color: #ffffff;
+	/* https://css-tricks.com/creating-non-rectangular-headers/#article-header-id-2 */
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
 }
 
 .about h2 {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 
 #avatar {
-  height: 175px;
-  border-radius: 50%;
+	height: 175px;
+	border-radius: 50%;
 }
 
 .gallery {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  text-align: center;
-  color: #ffffff;
-  margin-top: 75px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 75px;
 }
 
 .gallery p {
-  grid-column: span 4;
-  margin-bottom: 75px;
+	grid-column: span 4;
+	margin-bottom: 75px;
 }
 
 .gallery-item {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 250px;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 250px;
 }
 
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+@media (min-width: 1440px) {
+	.gallery {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 
-  .gallery-item {
-    height: 500px;
-  }
+	.gallery-item {
+		height: 500px;
+	}
 }
