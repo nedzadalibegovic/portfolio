@@ -23,17 +23,24 @@ body {
 	align-items: center;
 }
 
+.flex-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
 .about {
 	width: 100%;
 	height: 500px;
 }
 
 .contact {
-	height: 100vh;
+	padding: 80px 0px 50px 0px;
 }
 
-.contact>h2 {
-	margin-bottom: 20px;
+.contact > h2 {
+	margin-bottom: 10px;
 }
 
 .contact-form {
@@ -41,10 +48,38 @@ body {
 	box-sizing: border-box;
 	padding: 20px;
 	border: 0.5px solid #acacac;
+	width: 80%;
 }
 
-.contact-form label, input {
+.contact-form label {
 	display: block;
+	margin: 20px 0px 5px 0px;
+	width: 100%;
+}
+
+.contact-form textarea {
+	box-sizing: border-box;
+	resize: none;
+	height: 100px;
+	width: 100%;
+	padding: 10px;
+	border: 0.1px solid #e0e0e0;
+}
+
+.contact-form input {
+	display: block;
+	box-sizing: border-box;
+	border: 0.1px solid #e0e0e0;
+	min-height: 30px;
+	padding: 10px;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.contact-form form {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 .about h2 {
@@ -65,7 +100,6 @@ body {
 }
 
 /* https://link.medium.com/87N2Un0ccX */
-
 .gallery-container::before {
 	position: absolute;
 	background-color: #212121;
@@ -106,6 +140,16 @@ body {
 	height: 250px;
 }
 
+#submit {
+	margin-top: 10px;
+}
+
+/* https://parsleyjs.org/ */
+.parsley-required, .parsley-type, .parsley-minlength {
+	margin-left: 15px;
+	font-size: 12px;
+}
+
 @media (min-width: 1024px) {
 	.gallery {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -113,8 +157,18 @@ body {
 		margin: 75px auto;
 		width: 80%;
 	}
-	
+
+	.contact {
+		padding: 120px 0px 50px 0px;
+	}
+
 	.gallery-item {
 		height: 500px;
+	}
+}
+
+@media (min-width: 768px) {
+	.contact-form {
+		width: 400px;
 	}
 }

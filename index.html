@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Nedzad Alibegovic</title>
+	<script src="lib/jquery-3.4.1.min.js"></script>
+	<script src="lib/parsley.min.js"></script>
 </head>
 
 <body>
@@ -47,22 +49,25 @@
 			<img class="gallery-item" src="img/gallery/img (28).webp" />
 		</div>
 	</div>
-	<div class="contact flex-center">
+	<div class="contact flex-top">
 		<h2>Contact me!</h2>
 		<div class="contact-form flex-center">
-			<form action="">
-				<label for="fname">First Name</label>
-				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+			<!-- https://formspree.io/ -->
+			<!-- https://parsleyjs.org/ -->
+			<form data-parsley-validate action="https://formspree.io/form@nedzad.xyz" method="POST">
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="Your name.." data-parsley-trigger="change" required="">
 
-				<label for="lname">Last Name</label>
-				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				<label for="email">Email</label>
+				<input type="email" name="email" placeholder="Your email.." data-parsley-trigger="change" required="">
 
-				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+				<label for="message">Message</label>
+				<textarea name="message" placeholder="Write something.. (min 20 characters)" data-parsley-minlength="20" data-parsley-trigger="change" required=""></textarea>
+
+				<input id="submit" type="submit" value="Submit">
 			</form>
 		</div>
 	</div>
-	<script src="main.js"></script>
 </body>
 
 </html>
