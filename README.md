@@ -1,14 +1,11 @@
 # Portfolio
 
-### Things left to be added:
-* Image background for about section
-* Footer
-
 ### Used libraries:
 | Name | URL |
 | ---- | --- |
 | jQuery | https://jquery.com/ |
 | Parsley | https://parsleyjs.org/ |
+| Font Awesome | https://fontawesome.com/ |
 
 ### Used resources:
 | Name | URL |
