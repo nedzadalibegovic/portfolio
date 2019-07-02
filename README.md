@@ -21,3 +21,4 @@
 | Flexbox Froggy | https://flexboxfroggy.com/ |
 | MDN Web Docs | https://developer.mozilla.org/en-US/ |
 | Image shadow | https://fvsch.com/object-fit-decoration/ |
+| Easing functions | https://easings.net/ |

@@ -188,6 +188,13 @@ body {
 
 	.gallery-item {
 		height: 500px;
+		transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+
+	.gallery-item:hover {
+		transform: scale(1.075);
+		filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+		transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 	}
 }
 
