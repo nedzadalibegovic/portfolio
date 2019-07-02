@@ -1,7 +1,6 @@
 # Portfolio
 
 ### Things left to be added:
-* Enlarge picture in gallery by clicking on it
 * Image background for about section
 * Footer
 
@@ -20,3 +19,5 @@
 | WebP image format | https://developers.google.com/speed/webp/ |
 | Grid Garden | https://cssgridgarden.com/ |
 | Flexbox Froggy | https://flexboxfroggy.com/ |
+| MDN Web Docs | https://developer.mozilla.org/en-US/ |
+| Image shadow | https://fvsch.com/object-fit-decoration/ |
