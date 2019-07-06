@@ -145,8 +145,9 @@ body {
 	margin-top: 10px;
 }
 
-/* https://parsleyjs.org/ */
-.parsley-required, .parsley-type, .parsley-minlength {
+.parsley-required,
+.parsley-type,
+.parsley-minlength {
 	margin-left: 15px;
 	font-size: 12px;
 }
