@@ -103,7 +103,7 @@ body {
 /* https://link.medium.com/87N2Un0ccX */
 .gallery-container::before {
 	position: absolute;
-	background-color: #212121;
+	background-color: inherit;
 	content: "";
 	height: 100%;
 	width: 100%;
@@ -116,7 +116,7 @@ body {
 
 .gallery-container::after {
 	position: absolute;
-	background-color: #212121;
+	background-color: inherit;
 	content: "";
 	height: 100%;
 	width: 100%;
