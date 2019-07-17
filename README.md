@@ -11,7 +11,7 @@
 | Name | URL |
 | ---- | --- |
 | Asymmetrical Designs | https://link.medium.com/87N2Un0ccX |
-| Formspree | https://formspree.io/ |
+| Getform | https://getform.io/ |
 | Trocchi font | https://fonts.google.com/specimen/Trocchi |
 | WebP image format | https://developers.google.com/speed/webp/ |
 | Grid Garden | https://cssgridgarden.com/ |
