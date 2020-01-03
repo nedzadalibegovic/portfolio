@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Photography portfolio",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nedzadalibegovic/portfolio.git"
+  },
+  "author": "Nedzad Alibegovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nedzadalibegovic/portfolio/issues"
+  },
+  "homepage": "https://github.com/nedzadalibegovic/portfolio#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3",
+    "node-fetch": "^2.6.0"
+  }
+}
