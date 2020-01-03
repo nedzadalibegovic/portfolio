@@ -1,0 +1,23 @@
+name: "Load Images to Database"
+
+on:
+  push:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  fetch_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout repo'
+        uses: actions/checkout@v1
+      - name: 'Install Node.js'
+        uses: actions/setup-node@v1
+      - name: 'Install npm dependencies'
+        run: npm install
+      - name: 'Get images from bucket'
+        run: node index.js
+        env:
+          B2_ID: ${{ secrets.B2_ID }}
+          B2_KEY: ${{ secrets.B2_KEY }}
+          MONGO: ${{ secrets.MONGO }}
