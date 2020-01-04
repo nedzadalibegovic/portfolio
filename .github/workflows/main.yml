@@ -1,12 +1,11 @@
 name: "Load Images to Database"
 
 on:
-  push:
   schedule:
     - cron: '0 */6 * * *'
 
 jobs:
-  fetch_data:
+  load_images:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout repo'
