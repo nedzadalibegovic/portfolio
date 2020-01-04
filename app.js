@@ -7,11 +7,11 @@ const app = express();
 
 // middlewares
 app.use(cors());
-app.use('/api/v1/images', imagesRoute);
+app.use('/api/', imagesRoute);
 
 // routes
 app.get('/', (req,res) => {
-    res.redirect('/api/v1/images');
+    res.redirect('https://www.nedzadalibegovic.com/portfolio/');
 });
 
 mongoose.connect(process.env.MONGO, { useUnifiedTopology: true, useNewUrlParser: true });
