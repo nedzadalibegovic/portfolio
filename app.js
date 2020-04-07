@@ -6,7 +6,7 @@ const imagesRoute = require('./api/routes/images');
 const app = express();
 
 // middlewares
-app.use(cors({ origin: 'https://www.nedzadalibegovic.com/portfolio' }));
+app.use(cors({ origin: 'https://www.nedzadalibegovic.com' }));
 app.use('/api', imagesRoute);
 
 // routes
