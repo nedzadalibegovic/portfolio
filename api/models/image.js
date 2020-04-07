@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
-const ImageSchema = mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    sha1: String,
-    url: String
-}, {
-    versionKey: false
-});
+const ImageSchema = mongoose.Schema(
+    {
+        _id: String,
+        url: String,
+    },
+    {
+        versionKey: false,
+        timestamps: true,
+    }
+);
 
 module.exports = mongoose.model('Image', ImageSchema);

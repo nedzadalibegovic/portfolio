@@ -7,31 +7,31 @@ const authorize_account = async () => {
     let response = await fetch(url, {
         method: 'POST',
         headers: {
-            "Authorization": `Basic ${auth}`,
-            'Content-Type': 'application/json'
+            Authorization: `Basic ${auth}`,
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify({})
+        body: JSON.stringify({}),
     });
 
     return response.json();
-}
+};
 
-const list_file_names = async token => {
+const list_file_names = async (token) => {
     const url = `${token.apiUrl}/b2api/v2/b2_list_file_names`;
 
     let response = await fetch(url, {
         method: 'POST',
         headers: {
-            "Authorization": token.authorizationToken,
-            'Content-Type': 'application/json'
+            Authorization: token.authorizationToken,
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            "bucketId": token.allowed.bucketId,
-            "prefix": "_portfolio/"
-        })
+            bucketId: token.allowed.bucketId,
+            prefix: 'portfolio/',
+        }),
     });
 
     return response.json();
-}
+};
 
 module.exports = { authorize_account, list_file_names };
