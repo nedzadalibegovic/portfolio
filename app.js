@@ -7,12 +7,7 @@ const app = express();
 
 // middlewares
 app.use(cors({ origin: 'https://www.nedzadalibegovic.com' }));
-app.use('/api', imagesRoute);
-
-// routes
-app.get('/', (req, res) => {
-    res.redirect('https://www.nedzadalibegovic.com/portfolio');
-});
+app.use('/', imagesRoute);
 
 mongoose.connect(process.env.MONGO, {
     useUnifiedTopology: true,
