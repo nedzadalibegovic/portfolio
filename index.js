@@ -63,7 +63,7 @@ const main = async () => {
     process.stdout.write(`${counter}/${images.length}\n`);
 
     process.stdout.write('Checking if all image URLs are alive... ');
-    process.stdout.write(await checkLinks());
+    process.stdout.write((await checkLinks()) + '\n');
 
     await mongoose.disconnect();
 };
