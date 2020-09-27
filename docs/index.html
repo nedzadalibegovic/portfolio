@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Nedzad Alibegovic</title>
+        <link href="https://fonts.googleapis.com/css?family=Trocchi&display=swap" rel="stylesheet" />
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    </head>
 
-<head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nedzad Alibegovic</title>
-    <link href="https://fonts.googleapis.com/css?family=Trocchi&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
-</head>
-
-<body>
-    <div class="about flex-center">
-        <img src="https://cdn.nedzad.dev/portfolio/nedzad.webp" id="avatar" />
-        <h2>Nedžad Alibegović</h2>
-        <p>Some dude on the internet.</p>
-    </div>
-    <div class="gallery-container">
-        <p>Hope you enjoy my pics, yo.</p>
-        <div class="gallery">
+    <body>
+        <div class="overlay-background">
+            <div class="overlay"></div>
         </div>
-    </div>
-    <div class="contact flex-top">
-        <h2>Contact me!</h2>
-        <div class="contact-form flex-center">
-            <form data-parsley-validate action="https://getform.io/f/c18bf8e1-911f-472c-b1ee-91c5787a4cb5"
-                method="POST">
-                <label for="name">Name</label>
-                <input type="text" name="name" placeholder="Your name.." data-parsley-trigger="change" required="">
-
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Your email.." data-parsley-trigger="change" required="">
-
-                <label for="message">Message</label>
-                <textarea name="message" placeholder="Write something.. (min 20 characters)" data-parsley-minlength="20"
-                    data-parsley-trigger="change" required=""></textarea>
-
-                <input id="submit" type="submit" value="Submit">
-            </form>
+        <div class="about flex-center">
+            <img src="https://cdn.nedzad.dev/portfolio/nedzad.webp" id="avatar" />
+            <h2>Nedžad Alibegović</h2>
+            <p>Some dude on the internet.</p>
         </div>
-    </div>
-    <footer>
-        <a href="https://github.com/nedzadalibegovic/portfolio" target="_blank" rel="noreferrer">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:nedzad@nedzad.dev" target="_blank">
-            <i class="fas fa-at"></i>
-        </a>
-        <a href="https://www.instagram.com/nedzad.alibegovic/" target="_blank" rel="noreferrer">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/alibegovic/" target="_blank" rel="noreferrer">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" 
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
-        integrity="sha256-pEdn/pJ2tyT37axbEIPkyUUfuG1yXR0+YV+h+jphem4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-</body>
+        <div class="gallery-container">
+            <p>Hope you enjoy my pics, yo.</p>
+            <div class="gallery"></div>
+        </div>
+        <div class="contact flex-top">
+            <h2>Contact me!</h2>
+            <div class="contact-form flex-center">
+                <form
+                    data-parsley-validate
+                    action="https://getform.io/f/c18bf8e1-911f-472c-b1ee-91c5787a4cb5"
+                    method="POST"
+                >
+                    <label for="name">Name</label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name.."
+                        data-parsley-trigger="change"
+                        required=""
+                    />
 
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email.."
+                        data-parsley-trigger="change"
+                        required=""
+                    />
+
+                    <label for="message">Message</label>
+                    <textarea
+                        name="message"
+                        placeholder="Write something.. (min 20 characters)"
+                        data-parsley-minlength="20"
+                        data-parsley-trigger="change"
+                        required=""
+                    ></textarea>
+
+                    <input id="submit" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+        <footer>
+            <a href="https://github.com/nedzadalibegovic" target="_blank" rel="noreferrer">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:nedzad@nedzad.dev" target="_blank">
+                <i class="fas fa-at"></i>
+            </a>
+            <a href="https://www.instagram.com/nedzad.alibegovic/" target="_blank" rel="noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alibegovic" target="_blank" rel="noreferrer">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </footer>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+            integrity="sha256-pEdn/pJ2tyT37axbEIPkyUUfuG1yXR0+YV+h+jphem4="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+            integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="
+            crossorigin="anonymous"
+        ></script>
+        <script src="main.js"></script>
+    </body>
 </html>

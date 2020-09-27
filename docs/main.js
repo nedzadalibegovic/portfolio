@@ -1,52 +1,38 @@
-const addOnClick = () => {
-    $('.gallery-item').click(function () {
-        // create overlay with given img
-        $('body').prepend(
-            `<div class="overlay-background" style="display: none"><div class="overlay"><img src="${
-                $(this)[0].src
-            }" /></div></div>`
-        );
-
-        // fade overlay in
-        $('.overlay-background').fadeIn();
-
-        // fade overlay out and remove on callback
-        $('.overlay-background').click(function () {
-            $(this).fadeOut(function () {
-                $(this).remove();
-            });
-        });
-    });
-};
-
-const shuffle = (array) => {
-    let counter = array.length;
-
-    while (counter > 0) {
-        const index = Math.floor(Math.random() * counter);
-        const temp = array[--counter];
-
-        array[counter] = array[index];
-        array[index] = temp;
-    }
-
-    return array;
-};
-
-const main = async () => {
+(async () => {
     const response = await fetch(
         'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/portfolio-qcvuk/service/portfolio/incoming_webhook/api'
     );
     const json = await response.json();
-    const images = json.map((image) => image.url);
 
-    shuffle(images);
+    if (!response.ok) return;
 
-    for (image of images) {
-        $('.gallery').append(`<img class="gallery-item" src="${image}"/>`);
+    const gallery = document.querySelector('.gallery');
+    const overlayBg = document.querySelector('.overlay-background');
+    const overlay = document.querySelector('.overlay');
+
+    overlayBg.addEventListener('click', () => {
+        overlayBg.classList.add('overlay-background-hide');
+
+        setTimeout(() => {
+            overlayBg.classList.remove('overlay-background-hide');
+            overlayBg.setAttribute('style', 'display: none');
+            overlay.removeChild(overlay.firstChild);
+        }, 300);
+    });
+
+    for (const doc of json) {
+        const galleryImage = document.createElement('img');
+
+        galleryImage.src = doc.url;
+        galleryImage.className = 'gallery-item';
+        galleryImage.onclick = () => {
+            const overlayImage = document.createElement('img');
+            overlayImage.src = doc.url;
+
+            overlay.appendChild(overlayImage);
+            overlayBg.setAttribute('style', 'display: flex');
+        };
+
+        gallery.appendChild(galleryImage);
     }
-
-    addOnClick();
-};
-
-main();
+})();
