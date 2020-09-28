@@ -29,17 +29,12 @@
     <div class="contact flex-top">
       <h2>Contact me!</h2>
       <div class="contact-form flex-center">
-        <form
-          data-parsley-validate
-          action="https://getform.io/f/c18bf8e1-911f-472c-b1ee-91c5787a4cb5"
-          method="POST"
-        >
+        <form name="contact" method="POST" netlify>
           <label for="name">Name</label>
           <input
             type="text"
             name="name"
             placeholder="Your name.."
-            data-parsley-trigger="change"
             required=""
           />
 
@@ -48,7 +43,6 @@
             type="email"
             name="email"
             placeholder="Your email.."
-            data-parsley-trigger="change"
             required=""
           />
 
@@ -56,9 +50,8 @@
           <textarea
             name="message"
             placeholder="Write something.. (min 20 characters)"
-            data-parsley-minlength="20"
-            data-parsley-trigger="change"
             required=""
+            minlength="20"
           ></textarea>
 
           <input id="submit" type="submit" value="Submit" />
@@ -91,11 +84,6 @@
         <i class="fab fa-linkedin"></i>
       </a>
     </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
-      integrity="sha256-pEdn/pJ2tyT37axbEIPkyUUfuG1yXR0+YV+h+jphem4="
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
       integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs="

@@ -144,13 +144,6 @@ body {
   margin-top: 10px;
 }
 
-.parsley-required,
-.parsley-type,
-.parsley-minlength {
-  margin-left: 15px;
-  font-size: 12px;
-}
-
 .overlay-background {
   position: fixed;
   display: none;
