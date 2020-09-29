@@ -2,21 +2,29 @@ name: "Load Images to Database"
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   load_images:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout repo'
+      - name: "Checkout repo"
         uses: actions/checkout@v1
-      - name: 'Install Node.js'
+      - name: "Install Node.js"
         uses: actions/setup-node@v1
-      - name: 'Install npm dependencies'
+      - name: "Install npm dependencies"
         run: npm install
-      - name: 'Get images from bucket'
-        run: node index.js
+      - name: "Build project"
+        run: npm run build
+      - name: "Fetch images, then add to DB"
+        run: npm start
+        
         env:
-          B2_ID: ${{ secrets.B2_ID }}
-          B2_KEY: ${{ secrets.B2_KEY }}
-          MONGO: ${{ secrets.MONGO }}
+          STORAGE_ENDPOINT: ${{ secrets.STORAGE_ENDPOINT }}
+          STORAGE_ID: ${{ secrets.STORAGE_ID }}
+          STORAGE_KEY: ${{ secrets.STORAGE_KEY }}
+          STORAGE_BUCKET: ${{ secrets.STORAGE_BUCKET }}
+          MONGO_URL: ${{ secrets.MONGO_URL }}
+          MONGO_DB: ${{ secrets.MONGO_DB }}
+          MONGO_COLL: ${{ secrets.MONGO_COLL }}
+          CDN_URL: ${{ secrets.CDN_URL }}
