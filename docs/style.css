@@ -34,54 +34,6 @@ body {
   height: 500px;
 }
 
-.contact {
-  padding: 80px 0px 50px 0px;
-}
-
-.contact > h2 {
-  margin-bottom: 10px;
-}
-
-.contact-form {
-  margin: 20px;
-  box-sizing: border-box;
-  padding: 20px;
-  border: 0.5px solid #acacac;
-  width: 80%;
-}
-
-.contact-form label {
-  display: block;
-  margin: 20px 0px 5px 0px;
-  width: 100%;
-}
-
-.contact-form textarea {
-  box-sizing: border-box;
-  resize: none;
-  height: 100px;
-  width: 100%;
-  padding: 10px;
-  border: 0.1px solid #e0e0e0;
-  font-family: Arial;
-}
-
-.contact-form input {
-  display: block;
-  box-sizing: border-box;
-  border: 0.1px solid #e0e0e0;
-  min-height: 30px;
-  padding: 10px;
-  width: 100%;
-  margin-bottom: 5px;
-}
-
-.contact-form form {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .about h2 {
   margin-top: 20px;
 }
@@ -221,10 +173,6 @@ footer a:hover {
     width: 80%;
   }
 
-  .contact {
-    padding: 120px 0px 50px 0px;
-  }
-
   .gallery-item {
     height: 500px;
     transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -234,11 +182,5 @@ footer a:hover {
     transform: scale(1.075);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-}
-
-@media (min-width: 768px) {
-  .contact-form {
-    width: 400px;
   }
 }
