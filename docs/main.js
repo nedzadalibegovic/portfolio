@@ -1,7 +1,5 @@
 (async () => {
-  const response = await fetch(
-    "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/portfolio-qcvuk/service/portfolio/incoming_webhook/api"
-  );
+  const response = await fetch("https://portfolio.nedzad.dev/");
   const json = await response.json();
 
   if (!response.ok) return;
@@ -20,7 +18,7 @@
     }, 300);
   });
 
-  for (const doc of json) {
+  for (const doc of json[0].images) {
     const galleryImage = document.createElement("img");
 
     galleryImage.src = doc.url;
