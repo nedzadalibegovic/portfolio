@@ -42,6 +42,20 @@ const insertIntoDb = async (imgDocs: ImageCollection) => {
   await databaseClient.close();
 };
 
+const filterContents = (contents: s3.ObjectList): Image[] => {
+  const keyRegexp = /portfolio\/\d+.webp/;
+  const arr = contents.filter((x) => keyRegexp.test(x.Key!));
+
+  const imgArray = arr.map(
+    (x): Image => ({
+      hash: x.ETag?.split('"')[1]!,
+      url: process.env.CDN_URL! + x.Key,
+    })
+  );
+
+  return imgArray;
+};
+
 (async () => {
   const images = await storageClient
     .listObjectsV2({
@@ -51,15 +65,7 @@ const insertIntoDb = async (imgDocs: ImageCollection) => {
     .promise();
 
   if (images.Contents) {
-    const contents = images.Contents.filter((val) => val.Key !== "portfolio/");
-    contents.forEach((x) => (x.ETag = x.ETag?.split('"')[1]));
-
-    const imgArray = contents.map(
-      (x): Image => ({
-        hash: x.ETag!,
-        url: process.env.CDN_URL! + x.Key,
-      })
-    );
+    const imgArray = filterContents(images.Contents);
 
     const imgColl: ImageCollection = {
       _id: md5(imgArray.toString()).toString(),
