@@ -1,1 +1,0 @@
-![Website preview made with Screely](preview.webp)
